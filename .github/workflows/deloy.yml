@@ -17,6 +17,7 @@ jobs:
 
       - name: Install
         run: npm install
+        run: node node_modules/esbuild/install.js
 
       - name: Build
         run: npm run build
