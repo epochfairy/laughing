@@ -1,0 +1,35 @@
+<template>
+	<div class="login-copyright">
+		<div class="login-copyright-company">laughing，Made by epochfairy with ❤️</div>
+		<div class="login-copyright-msg">Copyright {{ $t('message.login.copyright') }}</div>
+	</div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+// import { onBeforeRouteUpdate } from 'vue-router'
+
+export default defineComponent({
+	name: 'Footer',
+	setup() {},
+})
+</script>
+
+<style lang="scss">
+.login-copyright {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 30px;
+	text-align: center;
+	color: rgb(238, 230, 230);
+	font-size: 12px;
+	opacity: 0.8;
+	.login-copyright-company {
+		white-space: nowrap;
+	}
+	.login-copyright-msg {
+		@extend .login-copyright-company;
+	}
+}
+</style>
