@@ -1,0 +1,1 @@
+import{p as s,l as a,o,f as c,i as e,m as t,q as l}from"./vendor.0e526771.js";const n={},d=l();s("data-v-7755cfcb");const r={class:"login-logo"};a();const f=d(((s,a)=>(o(),c("div",r,[e("span",null,t(s.$t("message.logo")),1)]))));n.render=f,n.__scopeId="data-v-7755cfcb";export default n;
