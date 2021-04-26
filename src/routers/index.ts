@@ -10,14 +10,15 @@ const staticRoutes: Array<RouteRecordRaw> = [
 			title: '登陆',
 		},
 	},
-	// {
-	// 	path: '/',
-	// 	name: '/',
-	// 	component: () => import('@/layout/Layout.vue'),
-	// 	redirect: '/home',
-	// 	meta: {
-	// 		isKeepAlive: true,
-	// 	},
+	{
+		path: '/',
+		name: '/',
+		component: () => import('@/layout/Home.vue'),
+		// redirect: '/home',
+		meta: {
+			isKeepAlive: true,
+		},
+	},
 	// 	children: [
 	// 		{
 	// 			path: '/home',

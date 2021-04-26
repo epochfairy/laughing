@@ -2311,10 +2311,10 @@ eslint-plugin-import@^2.22.1:
     resolve "^1.17.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jest@^24.3.5:
-  version "24.3.5"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-jest/download/eslint-plugin-jest-24.3.5.tgz#71f0b580f87915695c286c3f0eb88cf23664d044"
-  integrity sha1-cfC1gPh5FWlcKGw/DriM8jZk0EQ=
+eslint-plugin-jest@^24.3.6:
+  version "24.3.6"
+  resolved "https://registry.nlark.com/eslint-plugin-jest/download/eslint-plugin-jest-24.3.6.tgz?cache=0&sync_timestamp=1619396609589&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-plugin-jest%2Fdownload%2Feslint-plugin-jest-24.3.6.tgz#5f0ca019183c3188c5ad3af8e80b41de6c8e9173"
+  integrity sha1-XwygGRg8MYjFrTr46AtB3myOkXM=
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
@@ -6206,10 +6206,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.nlark.com/vite/download/vite-2.2.2.tgz#9ad2063929ecd632f16dc9471217e26992938aad"
-  integrity sha1-mtIGOSns1jLxbclHEhfiaZKTiq0=
+vite@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.nlark.com/vite/download/vite-2.2.3.tgz#1acbdfa56ac00e00e7ccb6988f63f130c2f99dbb"
+  integrity sha1-GsvfpWrADgDnzLaYj2PxMML5nbs=
   dependencies:
     esbuild "^0.9.3"
     postcss "^8.2.1"
