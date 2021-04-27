@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '@/layout/Index.vue'
 
 import featureRoute from '@/routers/modules/features'
@@ -47,7 +47,7 @@ const staticRoutes: Array<RouteRecordRaw> = [
 // 添加静态路由
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes: staticRoutes,
 })
 
