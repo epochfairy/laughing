@@ -13,4 +13,8 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+body {
+	margin: 0%;
+}
+</style>

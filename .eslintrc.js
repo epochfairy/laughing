@@ -14,6 +14,11 @@ module.exports = {
 	rules: {
 		'vue/no-multiple-template-root': 'off',
 		'import/no-extraneous-dependencies': 'off',
-		'import/no-unresolved': 'off',
+		'import/no-unresolved': [
+			2,
+			{
+				ignore: ['^@/'],
+			},
+		],
 	},
 }

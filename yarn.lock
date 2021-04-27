@@ -807,10 +807,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.22":
-  version "26.0.22"
-  resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.22.tgz?cache=0&sync_timestamp=1616695549147&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.22.tgz#8308a1debdf1b807aa47be2838acdcd91e88fbe6"
-  integrity sha1-gwih3r3xuAeqR74oOKzc2R6I++Y=
+"@types/jest@^26.0.23":
+  version "26.0.23"
+  resolved "https://registry.nlark.com/@types/jest/download/@types/jest-26.0.23.tgz#a1b7eab3c503b80451d019efb588ec63522ee4e7"
+  integrity sha1-obfqs8UDuARR0BnvtYjsY1Iu5Oc=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -835,10 +835,15 @@
   resolved "https://registry.npm.taobao.org/@types/minimist/download/@types/minimist-1.2.1.tgz#283f669ff76d7b8260df8ab7a4262cc83d988256"
   integrity sha1-KD9mn/dte4Jg34q3pCYsyD2YglY=
 
-"@types/node@*", "@types/node@^14.14.41":
+"@types/node@*":
   version "14.14.41"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.41.tgz?cache=0&sync_timestamp=1618543947232&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
   integrity sha1-0Lk52Uwde9U9BIJK9F8RObjEVhU=
+
+"@types/node@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-15.0.0.tgz#557dd0da4a6dca1407481df3bbacae0cd6f68042"
+  integrity sha1-VX3Q2kptyhQHSB3zu6yuDNb2gEI=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2149,10 +2154,10 @@ electron-to-chromium@^1.3.719:
   resolved "https://registry.nlark.com/electron-to-chromium/download/electron-to-chromium-1.3.720.tgz#f5d66df8754d993006b7b2ded15ff7738c58bd94"
   integrity sha1-9dZt+HVNmTAGt7Le0V/3c4xYvZQ=
 
-element-plus@^1.0.2-beta.40:
-  version "1.0.2-beta.40"
-  resolved "https://registry.npm.taobao.org/element-plus/download/element-plus-1.0.2-beta.40.tgz#30fc9b161496ae587fab86235c80b728ea43d909"
-  integrity sha1-MPybFhSWrlh/q4YjXIC3KOpD2Qk=
+element-plus@^1.0.2-beta.41:
+  version "1.0.2-beta.41"
+  resolved "https://registry.nlark.com/element-plus/download/element-plus-1.0.2-beta.41.tgz?cache=0&sync_timestamp=1619435912448&other_urls=https%3A%2F%2Fregistry.nlark.com%2Felement-plus%2Fdownload%2Felement-plus-1.0.2-beta.41.tgz#9c234b536b3401d042505c003e579bd65081f0f0"
+  integrity sha1-nCNLU2s0AdBCUFwAPleb1lCB8PA=
   dependencies:
     "@popperjs/core" "^2.4.4"
     "@types/lodash" "^4.14.161"

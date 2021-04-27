@@ -17,12 +17,12 @@ export default defineComponent({
 
 <style lang="scss">
 .login-copyright {
-	position: absolute;
+	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 30px;
 	text-align: center;
-	color: rgb(238, 230, 230);
+	color: rgb(228, 17, 17);
 	font-size: 12px;
 	opacity: 0.8;
 	.login-copyright-company {

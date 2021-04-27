@@ -1,4 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import Index from '@/layout/Index.vue'
+
+import featureRoute from '@/routers/modules/features'
 
 // 定义静态路由
 const staticRoutes: Array<RouteRecordRaw> = [
@@ -7,76 +10,34 @@ const staticRoutes: Array<RouteRecordRaw> = [
 		name: 'login',
 		component: () => import('@/layout/Login.vue'),
 		meta: {
-			title: '登陆',
+			title: 'message.login.title',
 		},
 	},
 	{
 		path: '/',
-		name: '/',
-		component: () => import('@/layout/Home.vue'),
-		// redirect: '/home',
-		meta: {
-			isKeepAlive: true,
-		},
+		name: 'index',
+		component: Index,
+		redirect: '/home',
+		children: [
+			{
+				path: '/home',
+				name: 'home',
+				component: () => import('@/views/Home.vue'),
+				meta: {
+					title: 'message.router.home',
+				},
+			},
+			featureRoute,
+			{
+				path: '/about',
+				name: 'about',
+				component: () => import('@/views/About.vue'),
+				meta: {
+					title: 'message.router.about',
+				},
+			},
+		],
 	},
-	// 	children: [
-	// 		{
-	// 			path: '/home',
-	// 			name: 'home',
-	// 			component: () => import('@/views/Home.vue'),
-	// 			meta: {
-	// 				title: 'message.router.home',
-	// 				isLink: '',
-	// 				isHide: false,
-	// 				isKeepAlive: true,
-	// 				isAffix: true,
-	// 				isIframe: false,
-	// 			},
-	// 		},
-	// 		{
-	// 			path: '/system',
-	// 			name: 'system',
-	// 			component: () => import('@/components/Parent.vue'),
-	// 			redirect: '/system/menu',
-	// 			meta: {
-	// 				title: 'message.router.system',
-	// 				isLink: '',
-	// 				isHide: false,
-	// 				isKeepAlive: true,
-	// 				isAffix: false,
-	// 				isIframe: false,
-	// 			},
-	// 			children: [
-	// 				{
-	// 					path: '/system/menu',
-	// 					name: 'systemMenu',
-	// 					component: () => import('@/views/system/System.vue'),
-	// 					meta: {
-	// 						title: 'message.router.system_menu',
-	// 						isLink: '',
-	// 						isHide: false,
-	// 						isKeepAlive: true,
-	// 						isAffix: false,
-	// 						isIframe: false,
-	// 					},
-	// 				},
-	// 				{
-	// 					path: '/system/user',
-	// 					name: 'systemUser',
-	// 					component: () => import('@/views/system/User.vue'),
-	// 					meta: {
-	// 						title: 'message.router.system_user',
-	// 						isLink: '',
-	// 						isHide: false,
-	// 						isKeepAlive: true,
-	// 						isAffix: false,
-	// 						isIframe: false,
-	// 					},
-	// 				},
-	// 			],
-	// 		},
-	// 	],
-	// },
 ]
 
 // 定义404界面
@@ -84,6 +45,7 @@ const staticRoutes: Array<RouteRecordRaw> = [
 // 获取目录下的 .vue 全部文件，参考 vite：import.meta.glob
 
 // 添加静态路由
+
 const router = createRouter({
 	history: createWebHistory(),
 	routes: staticRoutes,
