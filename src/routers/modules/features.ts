@@ -3,7 +3,7 @@ import { RouteRecordRaw } from 'vue-router'
 const featureRoute: RouteRecordRaw = {
 	path: '/feature',
 	name: 'feature',
-	component: () => import('@/components/Parent.vue'),
+	component: () => import('@/layout/commons/SlotParent.vue'),
 	meta: {
 		title: 'message.feature.feature',
 	},
@@ -19,7 +19,7 @@ const featureRoute: RouteRecordRaw = {
 		{
 			path: '/feature/system',
 			name: 'system',
-			component: () => import('@/components/Parent.vue'),
+			component: () => import('@/layout/commons/SlotParent.vue'),
 			meta: {
 				title: 'message.feature.system',
 			},
@@ -27,7 +27,7 @@ const featureRoute: RouteRecordRaw = {
 				{
 					path: '/feature/system/setting',
 					name: 'systemSetting',
-					component: () => import('@/components/Parent.vue'),
+					component: () => import('@/layout/commons/SlotParent.vue'),
 					meta: {
 						title: 'message.feature.setting',
 					},
@@ -35,7 +35,7 @@ const featureRoute: RouteRecordRaw = {
 						{
 							path: '/feature/system/setting/menu1',
 							name: 'systemSettingMenu1',
-							component: () => import('@/components/Parent.vue'),
+							component: () => import('@/layout/commons/SlotParent.vue'),
 							meta: {
 								title: 'message.feature.menu1',
 							},

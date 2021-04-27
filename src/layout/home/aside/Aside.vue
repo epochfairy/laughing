@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, defineAsyncComponent } from 'vue'
-import router from '@/routers'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
 	components: {
@@ -14,7 +14,7 @@ export default defineComponent({
 		MenuItem: defineAsyncComponent(() => import('@/layout/home/aside/MenuItem.vue')),
 	},
 	setup() {
-		const tabList = router.options.routes
+		const tabList = useRouter().options.routes
 		return {
 			tabList,
 		}
