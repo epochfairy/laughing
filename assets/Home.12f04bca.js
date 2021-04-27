@@ -1,1 +1,0 @@
-import{r as e,o as r,f as t,w as a,j as n}from"./vendor.0e526771.js";const o={},s=n("txt");o.render=function(n,o){const d=e("el-page-header");return r(),t(d,null,{default:a((()=>[s])),_:1})};export default o;
