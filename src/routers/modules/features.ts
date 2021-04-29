@@ -43,7 +43,7 @@ const featureRoute: RouteRecordRaw = {
 								{
 									path: '/feature/system/setting/menu1/menu1_1',
 									name: 'systemSettingMenu1Menu1_1',
-									component: () => import('@/views/feature/system/Menu1_2.vue'),
+									component: () => import('@/views/feature/system/Menu1_1.vue'),
 									meta: {
 										title: 'message.feature.menu1_1',
 									},

@@ -3,7 +3,7 @@
 		<el-aside width="200px" class="layout-aside"><Aside /></el-aside>
 		<el-container>
 			<el-header class="layout-header"><Header /></el-header>
-			<el-main class="layout-main"><Tags /></el-main>
+			<el-main class="layout-main"><TabsMain /></el-main>
 			<el-footer class="layout-footer"><Footer /></el-footer>
 		</el-container>
 	</el-container>
@@ -17,7 +17,7 @@ export default defineComponent({
 		Aside: defineAsyncComponent(() => import('@/layout/home/aside/Aside.vue')),
 		// AppMain: defineAsyncComponent(() => import('@/layout/home/main/AppMain.vue')),
 		Footer: defineAsyncComponent(() => import('@/layout/commons/Footer.vue')),
-		Tags: defineAsyncComponent(() => import('@/layout/home/header/Tags.vue')),
+		TabsMain: defineAsyncComponent(() => import('@/layout/home/main/TabsMain.vue')),
 	},
 	setup() {},
 })

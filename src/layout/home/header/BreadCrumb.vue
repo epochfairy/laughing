@@ -41,6 +41,7 @@ export default defineComponent({
 			// 父节点为submenu 无对应vue，暂不跳转
 			// router.push(path)
 		}
+
 		return { levelList, onBreadcrumbClick }
 	},
 })

@@ -1,7 +1,9 @@
 <template>
-	<el-tabs v-model="activeKey" type="border-card" closable @tab-click="onTabClick" @tab-remove="onTabRemove">
-		<el-tab-pane v-for="item in panes" :key="item.key" :label="$t(item.title)" :name="item.key"> </el-tab-pane>
-		<router-view :key="key" v-slot="{ Component }">
+	<el-tabs v-model="activeKey" type="border-card" closable @tab-remove="onTabRemove" @tab-click="onTabClick">
+		<template v-for="item in panes" :key="item.key">
+			<el-tab-pane :label="$t(item.title)" :name="item.key">{{ $t(item.title) }} </el-tab-pane>
+		</template>
+		<router-view v-slot="{ Component }">
 			<keep-alive>
 				<component :is="Component" />
 			</keep-alive>
@@ -17,9 +19,9 @@ export default defineComponent({
 	setup() {
 		const route = useRoute()
 		const router = useRouter()
+		// const include = ref([route.component])
 		const panes = ref([{ title: route.meta.title, key: route.path }])
 		const activeKey = ref(panes.value[0].key)
-		// const newTabIndex = ref(0)
 		const key = computed(() => route.path)
 		const onTabadd = (nextRoute: RouteLocationNormalized) => {
 			activeKey.value = nextRoute.path
@@ -27,6 +29,7 @@ export default defineComponent({
 				title: nextRoute.meta.title,
 				key: activeKey.value,
 			})
+			// include.value.push(nextRoute.component)
 		}
 		onBeforeRouteUpdate((to) => {
 			let flag = true
@@ -40,9 +43,9 @@ export default defineComponent({
 				onTabadd(to)
 			}
 		})
+
 		// function
 		const onTabClick = () => {
-			// return activeKey.value
 			// console.log(activeKey.value)
 			router.push({ path: activeKey.value })
 		}
