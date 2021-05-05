@@ -7,7 +7,7 @@ import featureRoute from '@/routers/modules/features'
 const staticRoutes: Array<RouteRecordRaw> = [
 	{
 		path: '/login',
-		name: 'login',
+		name: 'Login',
 		component: () => import('@/layout/Login.vue'),
 		meta: {
 			title: 'message.login.title',
@@ -15,13 +15,13 @@ const staticRoutes: Array<RouteRecordRaw> = [
 	},
 	{
 		path: '/',
-		name: 'index',
+		name: 'Index',
 		component: Index,
 		redirect: '/home',
 		children: [
 			{
 				path: '/home',
-				name: 'home',
+				name: 'Home', // 对应component组件中的name属性
 				component: () => import('@/views/Home.vue'),
 				meta: {
 					title: 'message.router.home',
@@ -30,7 +30,7 @@ const staticRoutes: Array<RouteRecordRaw> = [
 			featureRoute,
 			{
 				path: '/about',
-				name: 'about',
+				name: 'About',
 				component: () => import('@/views/About.vue'),
 				meta: {
 					title: 'message.router.about',

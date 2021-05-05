@@ -1,10 +1,10 @@
 <template>
 	<el-tabs v-model="activeKey" type="border-card" closable @tab-remove="onTabRemove" @tab-click="onTabClick">
 		<template v-for="item in panes" :key="item.key">
-			<el-tab-pane :label="$t(item.title)" :name="item.key">{{ $t(item.title) }} </el-tab-pane>
+			<el-tab-pane :label="$t(item.title)" :name="item.key"> </el-tab-pane>
 		</template>
 		<router-view v-slot="{ Component }">
-			<keep-alive>
+			<keep-alive :include="cacheList">
 				<component :is="Component" />
 			</keep-alive>
 		</router-view>
@@ -12,25 +12,28 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, computed } from 'vue'
-import { useRoute, useRouter, onBeforeRouteUpdate, RouteLocationNormalized } from 'vue-router'
+import { ref, defineComponent, computed, onMounted } from 'vue'
+import { useRoute, useRouter, onBeforeRouteUpdate, RouteLocationNormalized, RouteRecordName } from 'vue-router'
 
 export default defineComponent({
 	setup() {
 		const route = useRoute()
 		const router = useRouter()
-		// const include = ref([route.component])
-		const panes = ref([{ title: route.meta.title, key: route.path }])
+		const panes = ref([{ title: route.meta.title, key: route.path, name: route.name }])
+		const cacheList = ref(<any>[])
 		const activeKey = ref(panes.value[0].key)
 		const key = computed(() => route.path)
+
 		const onTabadd = (nextRoute: RouteLocationNormalized) => {
 			activeKey.value = nextRoute.path
+			cacheList.value.push(nextRoute.name)
 			panes.value.push({
 				title: nextRoute.meta.title,
 				key: activeKey.value,
+				name: nextRoute.name,
 			})
-			// include.value.push(nextRoute.component)
 		}
+
 		onBeforeRouteUpdate((to) => {
 			let flag = true
 			panes.value.forEach((pane, i) => {
@@ -44,16 +47,24 @@ export default defineComponent({
 			}
 		})
 
-		// function
+		onMounted(() => {
+			const { name } = router.currentRoute.value
+			cacheList.value.push(name)
+		})
+
 		const onTabClick = () => {
-			// console.log(activeKey.value)
 			router.push({ path: activeKey.value })
 		}
+
 		const onTabRemove = (targetKey: string) => {
 			let lastIndex = 0
 			panes.value.forEach((pane, i) => {
 				if (pane.key === targetKey) {
 					lastIndex = i - 1
+					const { name } = pane
+					if (name) {
+						cacheList.value = cacheList.value.filter((item: RouteRecordName) => item !== name)
+					}
 				}
 			})
 			panes.value = panes.value.filter((pane) => pane.key !== targetKey)
@@ -68,6 +79,7 @@ export default defineComponent({
 		}
 
 		return {
+			cacheList,
 			key,
 			panes,
 			activeKey,
