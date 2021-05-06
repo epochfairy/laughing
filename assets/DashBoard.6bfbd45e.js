@@ -1,1 +1,0 @@
-import{n as h}from"./vendor.b5a5699a.js";const r={},n=h("<h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1>",14);r.render=function(h,r){return n};export default r;
