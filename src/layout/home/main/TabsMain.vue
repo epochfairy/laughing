@@ -84,7 +84,6 @@ export default defineComponent({
 			panes,
 			activeKey,
 			onTabRemove,
-			// onTabadd,
 			onTabClick,
 		}
 	},

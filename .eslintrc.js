@@ -18,5 +18,6 @@ module.exports = {
 				ignore: ['^@/'],
 			},
 		],
+		'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.config.ts', '**/mocks/*.ts'] }],
 	},
 }

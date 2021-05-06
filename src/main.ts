@@ -3,9 +3,14 @@ import ElementPlus from 'element-plus'
 import router from '@/routers'
 // import { store, key } from '@/store'
 import i18n from '@/i18n'
+import worker from '@/mocks'
 import 'element-plus/lib/theme-chalk/index.css'
-// import '@/styles/login.scss'
+
 import App from '@/App.vue'
+
+if (import.meta.env.DEV) {
+	worker.start()
+}
 
 const app = createApp(App)
 
