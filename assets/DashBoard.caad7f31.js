@@ -1,0 +1,1 @@
+import{q as h}from"./vendor.1dc38eda.js";const r={},e=h("<h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1><h1>仪表盘</h1>",14);r.render=function(h,r){return e};export default r;
